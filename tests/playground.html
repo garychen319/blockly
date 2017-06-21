@@ -52,45 +52,66 @@
   <xml id="toolboxDemo" style="display: none">
     <category name="&#xf106; Query" colour="290">
       <block type="sparql_execution_endpoint_query">
-        <field name="ENDPOINT">http://bankofamerica.com</field>
+        <field name="ENDPOINT">http://dbpedia.org/sparql</field>
         <field name="LIMIT">5</field>
       </block>
       <block type="sparql_execution_endpoint_query">
-        <field name="ENDPOINT">http://live.dbpedia.org/sparql</field>
+        <field name="ENDPOINT">http://refdata.bankofamerica.com</field>
         <field name="LIMIT">5</field>
       </block>
       <block type="sparql_execution_endpoint_query">
-        <field name="ENDPOINT">https://query.wikidata.org/bigdata/namespace/wdq/sparql</field>
+        <field name="ENDPOINT">http://refdata.bankofamerica.com</field>
         <field name="LIMIT">5</field>
       </block>
     </category>
     <category name="&#xf104; Patterns" colour="120">
+
+      <!-- My block -->
       <block type="sparql_typedsubject_propertylist">
+
         <value name="SUBJECT">
           <block type="variables_get">
-            <field name="VAR">res</field>
+            <field name="VAR">country</field>
           </block>
         </value>
+        
         <value name="TYPE">
           <block type="variables_get">
-            <field name="VAR">type</field>
+            <field name="VAR">language</field>
           </block>
         </value>
+
+      </block>
+
+      
+      <block type="sparql_typedsubject_propertylist">
+
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">aspect</field>
+          </block>
+        </value>
+
         <statement name="PROPERTY_LIST">
           <block type="sparql_verb_object">
+
             <value name="VERB">
               <block type="variables_get">
                 <field name="VAR">pred</field>
               </block>
             </value>
+
             <value name="OBJECT">
               <block type="variables_get">
                 <field name="VAR">obj</field>
               </block>
             </value>
+
           </block>
         </statement>
+
       </block>
+
       <sep gap="32"></sep>
       <block type="sparql_anonsubject_propertylist">
         <statement name="PROPERTY_LIST">
@@ -108,6 +129,8 @@
           </block>
         </statement>
       </block>
+
+
       <sep gap="32"></sep>
       <block type="sparql_isa">
         <value name="TYPE">
@@ -116,6 +139,8 @@
           </block>
         </value>
       </block>
+
+
       <sep gap="8"></sep>
       <block type="sparql_verb_object">
         <value name="VERB">
@@ -129,6 +154,8 @@
           </block>
         </value>
       </block>
+
+
       <sep gap="8"></sep>
       <block type="sparql_reversePath_object">
         <value name="OBJECT">
@@ -409,35 +436,35 @@
         <field name="PREFIX">dcterms</field>
         <field name="LOCAL_NAME">creator</field>
       </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">dcterms</field>
-        <field name="LOCAL_NAME">publisher</field>
-      </block>
       <sep gap="32"></sep>
       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">foaf</field>
-        <field name="LOCAL_NAME">Agent</field>
+        <field name="PREFIX">aspect</field>
+        <field name="LOCAL_NAME">book-aspects#EquityAttributes</field>
       </block>
       <sep gap="8"></sep>
       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">foaf</field>
-        <field name="LOCAL_NAME">Person</field>
+        <field name="PREFIX">qzpath</field>
+        <field name="LOCAL_NAME">EquityAggregationUnit</field>
       </block>
       <sep gap="8"></sep>
       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">foaf</field>
-        <field name="LOCAL_NAME">name</field>
+        <field name="PREFIX">range</field>
+        <field name="LOCAL_NAME">book#EquityAggregationUnit</field>
       </block>
       <sep gap="8"></sep>
       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">foaf</field>
-        <field name="LOCAL_NAME">depiction</field>
+        <field name="PREFIX">p</field>
+        <field name="LOCAL_NAME">book#hasEquityAggregationUnit</field>
       </block>
       <sep gap="8"></sep>
       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">foaf</field>
-        <field name="LOCAL_NAME">knows</field>
+        <field name="PREFIX">template</field>
+        <field name="LOCAL_NAME">book/equity/aggregationunit/{?id}</field>
+      </block>
+      <sep gap="8"></sep>
+      <block type="sparql_prefixed_iri">
+        <field name="PREFIX">jsonpath</field>
+        <field name="LOCAL_NAME">$.EquityAggreagationUnit</field>
       </block>
       <sep gap="32"></sep>
       <block type="sparql_prefixed_iri">
@@ -448,6 +475,11 @@
       <block type="sparql_prefixed_iri">
         <field name="PREFIX">geo</field>
         <field name="LOCAL_NAME">long</field>
+      </block>
+       <sep gap="32"></sep>
+       <block type="sparql_prefixed_iri">
+        <field name="PREFIX">helllooooooo</field>
+        <field name="LOCAL_NAME">sup</field>
       </block>
     </category>
     <sep></sep>
