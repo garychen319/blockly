@@ -29977,7 +29977,10 @@
             if ("" === t) return "";
             var o = e.getFieldValue("LIMIT");
             null === o && (o = 0);
-            for (var i = "SELECT DISTINCT * WHERE {\n" + t + "\n}", s = null, a = 1; a <= e.orderFieldCount_; a++) {
+            //My code base prefix
+            for (var i = "BASE <http://refdata.bankofamerica.com/>\
+                \nPREFIX country: <http://refdata.bankofamerica.com/country#>\
+                \n\nSELECT DISTINCT * WHERE {\n" + t + "\n}", s = null, a = 1; a <= e.orderFieldCount_; a++) {
                 var l = r.valueToCode(e, "ORDER_FIELD" + a, r.ORDER_NONE);
                 if (l) {
                     var c = e.getFieldValue("ORDER_DIRECTION" + a);

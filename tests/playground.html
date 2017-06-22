@@ -25,7 +25,7 @@
     <h1>CESIUM</h1>
     <h2>SPARQL Query</h2>
 
-    <textarea rows="6" cols="30" name="myTextarea" id="myTextarea">
+    <textarea rows="9" cols="50" name="myTextarea" id="myTextarea">
     </textarea>
     <br>
     <input type="submit" name="button" id="button" onclick="updateQuery()" value="Update SPARQL Query" />
@@ -68,49 +68,186 @@
 
       <!-- My block -->
       <block type="sparql_typedsubject_propertylist">
-
         <value name="SUBJECT">
           <block type="variables_get">
             <field name="VAR">country</field>
           </block>
         </value>
-        
         <value name="TYPE">
           <block type="variables_get">
             <field name="VAR">language</field>
           </block>
         </value>
-
       </block>
+      <!-- End my block -->
 
-      
+      <!-- My block 2 -->
       <block type="sparql_typedsubject_propertylist">
-
         <value name="TYPE">
           <block type="variables_get">
             <field name="VAR">aspect</field>
           </block>
         </value>
-
         <statement name="PROPERTY_LIST">
           <block type="sparql_verb_object">
-
             <value name="VERB">
               <block type="variables_get">
-                <field name="VAR">pred</field>
+                <field name="VAR">book-aspects</field>
               </block>
             </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">EquityAttributes</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
 
+       <!-- My block 2 -->
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">qzpath</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">book-aspects#</field>
+              </block>
+            </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">EquityAggregationUnit</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
+
+       <!-- My block 2 -->
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">range</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">book#</field>
+              </block>
+            </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">EquityAggregationUnit</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
+
+       <!-- My block 2 -->
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">p</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">book#</field>
+              </block>
+            </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">EquityAggregationUnit</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
+
+       <!-- My block 2 -->
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">template</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">book#</field>
+              </block>
+            </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">equity/aggregationunit/{?id}</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
+
+      <!-- My block 2 -->
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">jsonpath</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">$.</field>
+              </block>
+            </value>
+            <value name="OBJECT">
+              <block type="variables_get">
+                <field name="VAR">EquityAggregationUnit</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+      <!-- End my block 2 -->
+
+      <block type="sparql_typedsubject_propertylist">
+        <value name="TYPE">
+          <block type="variables_get">
+            <field name="VAR">o</field>
+          </block>
+        </value>
+        <statement name="PROPERTY_LIST">
+          <block type="sparql_verb_object">
+            <value name="VERB">
+              <block type="variables_get">
+                <field name="VAR">book#</field>
+              </block>
+            </value>
             <value name="OBJECT">
               <block type="variables_get">
                 <field name="VAR">obj</field>
               </block>
             </value>
-
           </block>
         </statement>
-
       </block>
+
+
 
       <sep gap="32"></sep>
       <block type="sparql_anonsubject_propertylist">
@@ -406,36 +543,7 @@
       <block type="sparql_prefixed_iri"></block>
       <sep gap="8"></sep>
       <block type="sparql_iri"></block>
-      <sep gap="32"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">rdfs</field>
-        <field name="LOCAL_NAME">seeAlso</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">rdfs</field>
-        <field name="LOCAL_NAME">isDefinedBy</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">rdf</field>
-        <field name="LOCAL_NAME">value</field>
-      </block>
-      <sep gap="32"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">dcterms</field>
-        <field name="LOCAL_NAME">title</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">dcterms</field>
-        <field name="LOCAL_NAME">subject</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">dcterms</field>
-        <field name="LOCAL_NAME">creator</field>
-      </block>
+  
       <sep gap="32"></sep>
       <block type="sparql_prefixed_iri">
         <field name="PREFIX">aspect</field>
@@ -466,20 +574,11 @@
         <field name="PREFIX">jsonpath</field>
         <field name="LOCAL_NAME">$.EquityAggreagationUnit</field>
       </block>
-      <sep gap="32"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">geo</field>
-        <field name="LOCAL_NAME">lat</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">geo</field>
-        <field name="LOCAL_NAME">long</field>
-      </block>
+  
        <sep gap="32"></sep>
        <block type="sparql_prefixed_iri">
         <field name="PREFIX">helllooooooo</field>
-        <field name="LOCAL_NAME">sup</field>
+        <field name="LOCAL_NAME">canitypehere</field>
       </block>
     </category>
     <sep></sep>
