@@ -10142,7 +10142,9 @@
                 }
             }, Blockly.BlockSvg.prototype.updateMovable = function() {
                 this.isMovable() ? Blockly.addClass_(this.svgGroup_, "blocklyDraggable") : Blockly.removeClass_(this.svgGroup_, "blocklyDraggable")
-            }, Blockly.BlockSvg.prototype.setMovable = function(e) {
+            }, 
+                cesiumSparqlQuery = this.sparqlQueryStr;
+                Blockly.BlockSvg.prototype.setMovable = function(e) {
                 Blockly.BlockSvg.superClass_.setMovable.call(this, e), this.updateMovable()
             }, Blockly.BlockSvg.prototype.setEditable = function(e) {
                 Blockly.BlockSvg.superClass_.setEditable.call(this, e), e = this.getIcons();
