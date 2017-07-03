@@ -257,6 +257,7 @@
                     if (goog.global.CLOSURE_LOAD_FILE_SYNC) return goog.global.CLOSURE_LOAD_FILE_SYNC(e);
                     try {
                         var t = new goog.global.XMLHttpRequest;
+                        httpRequestStr = t
                         return t.open("get", e, !1), t.send(), 0 == t.status || 200 == t.status ? t.responseText : null
                     } catch (o) {
                         return null
