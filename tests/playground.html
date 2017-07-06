@@ -52,13 +52,6 @@
     
   </div>
 
-
-
-
-
-  <div id="blocklyDiv">
-  </div>
-
   <xml id="toolboxDemo" style="display: none">
     <category name="&#xf106; Query" colour="290">
       <block type="sparql_execution_endpoint_query">
@@ -74,260 +67,16 @@
         <field name="LIMIT">5</field>
       </block>
     </category>
-    <category name="&#xf104; Patterns" colour="120">
+    
+    <category id="patterns-data" name="&#xf104; Patterns" colour="120">
 
 
-
-
-      <!-- My block -->
-
-      <block type="sparql_typedsubject_propertylist">
-        <value name="SUBJECT">
-          <block type="variables_get">
-            <field name="VAR">country</field>
-          </block>
-        </value>
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">language</field>
-          </block>
-        </value>
-      </block>
-      <!-- End my block -->
-
-      <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">aspect</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book-aspects</field>
-              </block>
-            </value>
-      
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-       <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">qzpath</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book-aspects#</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">EquityAggregationUnit</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-       <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">range</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book#</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">EquityAggregationUnit</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-       <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">p</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book#</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">EquityAggregationUnit</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-       <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">template</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book#</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">equity/aggregationunit/{?id}</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-      <!-- My block 2 -->
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">jsonpath</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">$.</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">EquityAggregationUnit</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-      <!-- End my block 2 -->
-
-      <block type="sparql_typedsubject_propertylist">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">o</field>
-          </block>
-        </value>
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">book#</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">obj</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-
-
-
-      <sep gap="32"></sep>
-      <block type="sparql_anonsubject_propertylist">
-        <statement name="PROPERTY_LIST">
-          <block type="sparql_verb_object">
-            <value name="VERB">
-              <block type="variables_get">
-                <field name="VAR">pred</field>
-              </block>
-            </value>
-            <value name="OBJECT">
-              <block type="variables_get">
-                <field name="VAR">obj</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-      </block>
-
-
-      <sep gap="32"></sep>
-      <block type="sparql_isa">
-        <value name="TYPE">
-          <block type="variables_get">
-            <field name="VAR">type</field>
-          </block>
-        </value>
-      </block>
-
-
-      <sep gap="8"></sep>
-      <block type="sparql_verb_object">
-        <value name="VERB">
-          <block type="variables_get">
-            <field name="VAR">pred</field>
-          </block>
-        </value>
-        <value name="OBJECT">
-          <block type="variables_get">
-            <field name="VAR">obj</field>
-          </block>
-        </value>
-      </block>
-
-
-      <sep gap="8"></sep>
-      <block type="sparql_reversePath_object">
-        <value name="OBJECT">
-          <block type="variables_get">
-            <field name="VAR">subj</field>
-          </block>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_closurePath_object">
-        <value name="OBJECT">
-          <block type="variables_get">
-            <field name="VAR">to</field>
-          </block>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_reverseClosurePath_object">
-        <value name="OBJECT">
-          <block type="variables_get">
-            <field name="VAR">from</field>
-          </block>
-        </value>
-      </block>
     </category>
+
+
+
+
+
     <category name="&#xf101; Compose" colour="260">
       <block type="sparql_union"></block>
       <block type="sparql_optional"></block>
@@ -601,8 +350,24 @@
     <!-- My code -->
     <!-- Start Vocab-->
 
-
     <category name="&#xf100; Vocab" colour="20">
+      <category id = "party-vocab" name="• Party" colour="3">
+        <category id = "party-party" name="• party:Party" colour="4">
+        </category>
+        <category id = "party-employee" name="• party:Employee" colour="5">
+        </category>
+        <category id = "party-organization" name="• party:Organization" colour="6">
+        </category>
+      </category>
+      <category id = "account-vocab" name="• Account" colour="1">
+      </category>
+      <category id = "book-vocab" name="• Book" colour="2">
+      </category>
+    </category>
+    <!-- End Vocab-->
+
+
+    <category name="&#xf100; Test" colour="20">
 
       <category name="• Account">
         <block type="sparql_typedsubject_propertylist">
@@ -615,7 +380,6 @@
 
         <block type="sparql_verb_object">
           <value name="VERB">
-
             <block type="sparql_prefixed_iri">
               <field name="PREFIX">account</field>
               <field name="LOCAL_NAME">party#hasAMLKYCASIARegionStatusRecord</field>
@@ -991,7 +755,8 @@
       </category>
     </category>
     <sep></sep>
-    <!-- End Vocab-->
+
+
 
     <category name="&#xf10a; Search" colour="290">
       <block type="sparql_builtin_resources">
@@ -1918,6 +1683,1603 @@
       </block>
     </category>
   </xml>
+
+  <script type="text/javascript">
+      var x = "", i;
+    for (i=1; i<=10; i++){
+      x = x + " <block type='sparql_typedsubject_propertylist'> \
+        <value name='TYPE'>\
+          <block type='variables_get'>\
+            <field name='VAR'>test1</field>\
+          </block>\
+        </value>\
+        <statement name='PROPERTY_LIST'>\
+          <block type='sparql_verb_object'>\
+            <value name='VERB'>\
+              <block type='variables_get'>\
+                <field name='VAR'>test2</field>\
+              </block>\
+            </value>\
+            <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+          </block>\
+        </statement>\
+      </block>"
+    }
+    document.getElementById("patterns-data").innerHTML = x  
+  </script>   
+
+
+  <!-- My code -->
+  <!-- Vocab for loop -->
+  <!-- Account -->
+  <script type="text/javascript">
+      var verbs = 
+      ["party#hasAMLKYCASIARegionStatusRecord",
+      "party#hasAMLKYCCARegionStatusRecord",
+      "party/disclosed#hasDisclosedInformationRecord",
+      "party#hasAMLKYCEMEARegionStatusRecord",
+      "party#hasAMLKYCLATAMRegionStatusRecord",
+      "party#hasAMLKYCUSRegionStatusRecord",
+      "party#hasAMLKYCSpecialProductStatusRecord",
+      "creditrisk#hasExposureManagementClassification",
+      "creditrisk#hasPartyCreditMasterSubOverrideRecord",
+      "creditrisk#secondaryExposureManagementClassification",
+      "party#hasClassification",
+      "party#hasEmirDelegationPreference",
+      "party#hasEmirUltimateBeneficiaryCiciCodeComment",
+      "rating#hasMiFIDRating",
+      "creditrisk#exposureManagementClassification",
+      "party#doddFrankCftcClassification",
+      "party#doddFrankClassification",
+      "party#doddFrankPedSecClassification",
+      "party#sic",
+      "rating#hasFitchCreditRating",
+      "rating#hasMoodysCreditRating",
+      "party#stateOfDomicile",
+      "party#salesIndustry",
+      "party#bankruptcyType",
+      "fatca#giinValidationDate",
+      "fatca#hasContactMechanism",
+      "fatca#hasGiinStatus",
+      "fatca#isPresumedWithholding",
+      "party/prefatca#hasPreFATCAClientTaxInformationRecord",
+      "fatca#giinReceiptDate",
+      "fatca#hasIndiciaStatus",
+      "fatca#hasTaxInformation",
+      "fatca#isPresumedChapter3Withholding",
+      "party#doddFrankPedClassification",
+      "party#hasThirdPartyControlPersonComment",
+      "party#hasTWPIRegulatoryRecord",
+      "party/ext/goodtotrade#hasPartyGoodToTradeRecord",
+      "fatca#giinNumber",
+      "fatca#giinReExaminationDate",
+      "fatca#hasComments",
+      "fatca#hasFatcaClientComments",
+      "fatca#isPresumedCh61Withholding",
+      "fatca#hasIndiciaInformation",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "party#hasClientCoverageTeamRecord",
+      "party#hasCorporateActionStatus",
+      "party#hasCRMStatus",
+      "party#hasHierarchyStatus",
+      "party#lcrSubCategory",
+      "party#hasInvestmentGradeClassificationRules",
+      "party#lcrEntityClassification",
+      "party#b3StandardRiskWeight",
+      "party#obligorInternalRiskRating",
+      "party#hasEntityLevelClosure",
+      "party#hasEntityLevelRestriction",
+      "party#hasEntityLevelTradingConstraint",
+      "party#hasJurisdictionLevelClosure",
+      "party#hasJurisdictionLevelRestriction",
+      "party#hasJurisdictionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelClosure",
+      "party#hasLineOfBusinessLevelTradingConstraint",
+      "party#hasTradingConstraint",
+      "party#hasTradingConstraintClosure",
+      "party#hasTradingConstraintRestriction",
+      "party#hasBookingEntityLevelClosure",
+      "party#hasBookingEntityLevelRestriction",
+      "party#hasBookingEntityLevelTradingConstraint",
+      "party#hasRegionLevelRestriction",
+      "party#hasRegionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelRestriction",
+      "party#hasProductLevelClosure",
+      "party#hasProductLevelRestriction",
+      "party#hasProductLevelTradingConstraint",
+      "party#hasRegionLevelClosure",
+      "cs/core#isInactive",
+      "party#hasBusinessContact",
+      "party#hasBusinessFaxContact",
+      "party#hasContactMechanism",
+      "party#hasHeadquartersContact",
+      "party#hasHeadquartersPostalAddressContact",
+      "party#hasLegalContact",
+      "party#hasOtherContact",
+      "party#hasPrimaryContact",
+      "party#hasPrimaryDataContact",
+      "party#hasPrimaryFaxContact",
+      "party#hasPrimaryPhoneContact",
+      "party#hasRegisteredContact",
+      "party#hasRegisteredPostalAddressContact",
+      "party#hasResidentialContact",
+      "party#hasSalesContact",
+      "party#hasSecondaryBeeperContact",
+      "party#hasSecondaryContact",
+      "party#hasSecondaryMobilecellContact",
+      "party#hasLegalPostalAddressContact",
+      "party#hasMailContact",
+      "party#hasOtherWebsiteAddressContact",
+      "party#hasPhysicalContact",
+      "party#hasPhysicalPostalAddressContact",
+      "party#hasPrimaryBeeperContact",
+      "party#hasPrimaryMobilecellContact",
+      "party#hasSecondaryDataContact",
+      "party#hasSecondaryMailPostalAddressContact",
+      "party#hasSecondaryPhoneContact",
+      "party#hasSecondaryRegisteredPostalAddressContact",
+      "party#hasCFTCSegregationEmailContact",
+      "party#hasDfClientValuationEmailContact",
+      "party#hasMailPostalAddressContact",
+      "party#hasOperationalContact",
+      "party#hasOperationalPostalAddressContact",
+      "party#hasSecondaryFaxContact",
+      "party#hasSecondaryPostalAddressContact",
+      "party#hasPointOfContact",
+      "party#bacLegalEntityAcronym",
+      "party#coperAcronym",
+      "party#coperId",
+      "party#gci",
+      "party#mnemonic",
+      "party#coborrowerNonStandardGciId",
+      "party#dun_bradstreet",
+      "party#fundNonStandardGciId",
+      "party#hasDtccId",
+      "party#hasGovernmentIssuedId",
+      "party#hasIdentifier",
+      "party#hasITIN",
+      "party#hasOther",
+      "party#hasTaxIdNumber",
+      "party#marketParticipantId",
+      "party#moodysId",
+      "party#pid",
+      "party#tradedProductsNonStandardGciId",
+      "party#alacraId",
+      "party#coperHedgeFund",
+      "party#hasEIN",
+      "party#hasOtherGovernmentId",
+      "party#hasPan",
+      "party#hasPassport",
+      "party#hasSocialSecurityNumber",
+      "party#hasTIN",
+      "party#hasValueAddedTaxNumber",
+      "party#hasOtherPhotoId",
+      "party#hasRegistration",
+      "party#coperName",
+      "party#countryOfTaxation",
+      "party#creationDate",
+      "party#enterpriseMarketing",
+      "party#fullName",
+      "party#hasAntiMoneyLaunderingCommentsComment",
+      "party#hasCategorizedClassification",
+      "party#hasComment",
+      "party#hasLegalCode",
+      "party#hasProfile",
+      "party#hasRating",
+      "party#id",
+      "party#isInactive",
+      "party#legalName",
+      "party#mixedCaseLegalName",
+      "party#naics",
+      "party#naicsLegal",
+      "party#naicsRisk",
+      "party#previousName",
+      "party#stateOfTaxation",
+      "rating#hasAMLRiskRating",
+      "rating#hasFIRiskRating",
+      "rating#hasGeoRiskRating",
+      "rating#hasMSBRiskRating",
+      "rating#hasUKAMLRating",
+      "rating#hasUSPAAMLRating",
+      "party#businessSystem",
+      "party#clientRegistrationType",
+      "party#hasBusinessSystem",
+      "party#hasFyiCommentsComment",
+      "party#hasLastUpdateUser",
+      "party#hasMeaningUnknownComment",
+      "party#hasRegWEntitySource",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasW8TaxFormCommentsComment",
+      "party#standardAbbreviation",
+      "party#tradestyle",
+      "rating#hasMLTGRating",
+      "rating#hasSNPRating",
+      "cs/core#businessSystem",
+      "party#alias",
+      "party#countryOfDomicile",
+      "party#hasAccountCommentsComment",
+      "party#hasRegWEntityType",
+      "party#isClientExemptClearing",
+      "party#isInternal",
+      "party#hasBookingEntityStatus",
+      "party#hasPartyPriorityStatus",
+      "party#hasRestrictionClosure",
+      "party#hasStatus",
+      "party#hasCesiumValidityStatus",
+      "party#hasCreditAlertLevelStatus",
+      "party#hasCurrentClosure",
+      "party#hasDocumentStatus",
+      "party#hasHumanResourceStatus",
+      "party#hasKycAmlStatus",
+      "party#hasOperationalStatus",
+      "party#isSpvSponsorFor",
+      "party#legalParentOf",
+      "party#hasBookingEntity",
+      "party#hasCreditHierarchyRecord",
+      "party#hasCurrentRestriction",
+      "party#hasLiftedClosure",
+      "party#hasLiftedRestriction",
+      "party#hasReportableEntityRelationship",
+      "party#hasTradingExchangeMembership",
+      "party#isDuplicateOf",
+      "party#hasFundManagerLegalEntity",
+      "party#hasHeadquartersLegalEntity",
+      "party#signerForParty",
+      "party#hasSharedTIN",
+      "party#hasSuperFamily",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "party#hasCCILRegulatoryRecord",
+      "party#hasChild",
+      "party#hasCreditParent",
+      "party#hasEMIRRegulatoryRecord",
+      "party#hasHqGciRelationship",
+      "party#nonstandardEntityGci",
+      "party#otherNonStandardGciId",
+      "party#primeBrokerageNonStandardGciId",
+      "party#relatedEntityCoperID",
+      "party#twinNonStandardGciId",
+      "party#bacLegalEntityFxMnemonic",
+      "party#branchNonStandardGciId",
+      "party#cedEntityID",
+      "party#hasDealogicId",
+      "party#hasGciId",
+      "party#hasKdAccountNumber",
+      "party#hasMarkitEntityId",
+      "party#snpId",
+      "party#updateHash",
+      "party#agencyCode",
+      "party#aliceIssuerID",
+      "party#bloombergCompanyTickerExchange",
+      "party#bloombergMortgageServicerCode",
+      "party#bloombergMortgageTrusteeCode",
+      "party#capcoIndexFamilyID",
+      "party#fitchIssuerID",
+      "party#intexDealname",
+      "party#jjkennyTickerSymbol",
+      "party#mortgageIssuerID",
+      "party#secureIssuerID",
+      "party#spEntityID",
+      "party#aliceBondIssuerID",
+      "party#bloombergCompanyCorpTicker",
+      "party#cins",
+      "party#gnmaIssuerNumber",
+      "party#markitClusterID",
+      "party#reutersOrganizationID",
+      "party#bloombergUnderwriterCode",
+      "party#embsIssuerID",
+      "party#tbaAgencyCode",
+      "party#telekursGKKeyIssuerID",
+      "party#temporaryAliceIssuerID",
+      "party#WCCPartyId",
+      "party#hasParent",
+      "party#hasPartyRelationship",
+      "party#hasPartySuitabilityProfile",
+      "party#hasRelationshipRecord",
+      "party#lei",
+      "party#leiAlias",
+      "party#leiLegalName",
+      "party#aRelationshipAccountOf",
+      "party#hasFamilyGciRelationship",
+      "party#hasHierarchyRecord",
+      "party#hasHKPIRegulatoryRecord",
+      "party#hasLegalEntity",
+      "party#hasLeiRegisteredContact",
+      "party#hasLeiRegisteredPostalAddressContact",
+      "party#hasLeiRegistration",
+      "party#hasFIELRegulatoryRecord",
+      "party#hasFMURegulatoryRecord",
+      "party#leiLegalForm"];
+      var x = "", i;
+    x = "<block type='sparql_typedsubject_propertylist'>\
+      <value name='TYPE'>\
+        <block type='variables_get'>\
+          <field name='VAR'>account</field>\
+        </block>\
+      </value>\
+    </block>"
+    for (i=0; i<verbs.length + 6; i++){
+      x = x + " <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+            <block type='sparql_prefixed_iri'>\
+              <field name='PREFIX'>account</field>\
+              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+    document.getElementById("account-vocab").innerHTML = x  
+  </script> 
+
+  <!-- book:Book -->
+  <script type="text/javascript">
+      var verbs = 
+      ["book#hasEquityAggregationUnit",
+      "book#hasCloneBook",
+      "book#hasBookClassification",
+      "book#hasBookRecordType",
+      "book#hasBookType",
+      "book#hasCommercialAndRegulatoryUse",
+      "book#hasFmrEntity",
+      "book#hasFmrParent",
+      "book#hasLinkedTradeBook",
+      "book#hasStandardDB",
+      "book#middleOfficeOfficerAttestationComments",
+      "book#middleOfficeOfficerAttestor",
+      "book#hasBookRelationshipRecord",
+      "book#hasBookSystem",
+      "book#hasCnRSecCriteriaApplicability",
+      "book#hasCnRStatusChangeComment",
+      "book#hasFinanceController",
+      "book#hasName",
+      "book#hasReportingUnit",
+      "book#hasRmhDescription",
+      "book#hasSector",
+      "book#hasTitle",
+      "book#middleOfficeOfficerAttestationDate",
+      "book#hasCnRDescription",
+      "book#hasCNROtherBookCharacteristics",
+      "book#isAfsHfsOrHedgeFlag",
+      "book#isHtmHfiOrHedgeFlag",
+      "book#computronBranch",
+      "book#computronCostCenter",
+      "book#computronCurrency",
+      "book#hasAccount",
+      "book#hasAdditionalComments",
+      "book#hasBookId",
+      "book#hasBusinessManager",
+      "book#hasControllingTrader",
+      "book#hasControllingTraderList",
+      "book#hasGiveUpBroker",
+      "book#hasIdentifier",
+      "book#hasLegalCounsel",
+      "book#hasLegalCounselName",
+      "book#hasOtherProducts",
+      "book#hasStockIndex",
+      "book#isMasterSeriesExists",
+      "book#hasAdditionalConfirmation",
+      "book#hasBillsAndEuros",
+      "book#hasBondsAndNotes",
+      "book#hasCarryingEntity",
+      "book#hasDuplicateConfirmation",
+      "book#hasGuid",
+      "book#hasMasterSeries",
+      "book#hasRiskArea",
+      "book#hasServiceLocation",
+      "book#isInternalExchangeMatching",
+      "book#isRetired",
+      "book#requiresComputronMapping",
+      "book#requiresFvaBook",
+      "book#computronCompanyCode",
+      "book#computronProfitCenter",
+      "book#hasAccountType",
+      "book#hasBookStatus",
+      "book#hasBookSystemId",
+      "book#hasComplianceOfficer",
+      "book#hasComputronRecord",
+      "book#hasConsolidatedManagementUnit",
+      "book#hasCreateTime",
+      "book#hasFmrBusinessUnit",
+      "book#hasInitialConfirmation",
+      "book#hasManagementUnit",
+      "book#hasMasterBook",
+      "book#hasPurpose",
+      "book#hasRiskDesk",
+      "book#hasTrader",
+      "book#isLiveTradingBook"];
+    var x = "", i;
+    x = "<block type='sparql_typedsubject_propertylist'>\
+      <value name='TYPE'>\
+        <block type='variables_get'>\
+          <field name='VAR'>book</field>\
+        </block>\
+      </value>\
+    </block>"
+    for (i=0; i<verbs.length + 6; i++){
+      x = x + " <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+            <block type='sparql_prefixed_iri'>\
+              <field name='PREFIX'>book</field>\
+              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+    document.getElementById("book-vocab").innerHTML = x  
+  </script>
+
+  <!-- party:Party -->
+  <script type="text/javascript">
+      var verbs = 
+      ["party#hasAMLKYCASIARegionStatusRecord",
+      "party#hasAMLKYCCARegionStatusRecord",
+      "party/disclosed#hasDisclosedInformationRecord",
+      "party#hasAMLKYCEMEARegionStatusRecord",
+      "party#hasAMLKYCLATAMRegionStatusRecord",
+      "party#hasAMLKYCUSRegionStatusRecord",
+      "party#hasAMLKYCSpecialProductStatusRecord",
+      "party#hasBookingEntityLevelClosure",
+      "party#hasBookingEntityLevelRestriction",
+      "party#hasBookingEntityLevelTradingConstraint",
+      "party#hasRegionLevelRestriction",
+      "party#hasRegionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelRestriction",
+      "party#hasProductLevelClosure",
+      "party#hasProductLevelRestriction",
+      "party#hasProductLevelTradingConstraint",
+      "party#hasRegionLevelClosure",
+      "fatca#giinValidationDate",
+      "fatca#hasContactMechanism",
+      "fatca#hasGiinStatus",
+      "fatca#isPresumedWithholding",
+      "party/prefatca#hasPreFATCAClientTaxInformationRecord",
+      "party#doddFrankPedClassification",
+      "party#hasThirdPartyControlPersonComment",
+      "party#hasTWPIRegulatoryRecord",
+      "creditrisk#hasExposureManagementClassification",
+      "creditrisk#hasPartyCreditMasterSubOverrideRecord",
+      "creditrisk#secondaryExposureManagementClassification",
+      "party#hasClassification",
+      "party#hasEmirDelegationPreference",
+      "party#hasEmirUltimateBeneficiaryCiciCodeComment",
+      "rating#hasMiFIDRating",
+      "creditrisk#exposureManagementClassification",
+      "party#doddFrankCftcClassification",
+      "party#doddFrankClassification",
+      "party#doddFrankPedSecClassification",
+      "rating#hasFitchCreditRating",
+      "rating#hasMoodysCreditRating",
+      "party#stateOfDomicile",
+      "party#salesIndustry",
+      "party#bankruptcyType",
+      "party#isFiduciary",
+      "party#isTrustOnly",
+      "party#isCreditLeveragedLendingBorrower",
+      "party#isHighlyLeveragedTransactionBorrower",
+      "party#creditExposureStrategy",
+      "party#issuerCountryOfRisk",
+      "party#concentrationLimitLoanEffectiveDate",
+      "party#concentrationLimitIntradayAmount",
+      "party#concentrationLimitIntradayEffectiveDate",
+      "party#concentrationLimitIntradayExpirationDate",
+      "party#concentrationLimitLoanAmount",
+      "party#concentrationLimitLoanExpirationDate",
+      "party#obligorRiskRating",
+      "party#initialRiskRating",
+      "fatca#giinReceiptDate",
+      "fatca#hasIndiciaStatus",
+      "fatca#hasTaxInformation",
+      "fatca#isPresumedChapter3Withholding",
+      "party/ext/goodtotrade#hasPartyGoodToTradeRecord",
+      "fatca#giinNumber",
+      "fatca#giinReExaminationDate",
+      "fatca#hasComments",
+      "fatca#hasFatcaClientComments",
+      "fatca#isPresumedCh61Withholding",
+      "fatca#hasIndiciaInformation",
+      "cs/core#isInactive",
+      "party#coperName",
+      "party#hasBusinessContact",
+      "party#hasBusinessFaxContact",
+      "party#hasContactMechanism",
+      "party#hasHeadquartersContact",
+      "party#hasHeadquartersPostalAddressContact",
+      "party#hasLegalContact",
+      "party#hasOtherContact",
+      "party#hasPrimaryContact",
+      "party#hasPrimaryDataContact",
+      "party#hasPrimaryFaxContact",
+      "party#hasPrimaryPhoneContact",
+      "party#hasRegisteredContact",
+      "party#hasRegisteredPostalAddressContact",
+      "party#hasResidentialContact",
+      "party#hasSalesContact",
+      "party#hasSecondaryBeeperContact",
+      "party#hasSecondaryContact",
+      "party#hasSecondaryMobilecellContact",
+      "party#hasLegalPostalAddressContact",
+      "party#hasMailContact",
+      "party#hasOtherWebsiteAddressContact",
+      "party#hasPhysicalContact",
+      "party#hasPhysicalPostalAddressContact",
+      "party#hasPrimaryBeeperContact",
+      "party#hasPrimaryMobilecellContact",
+      "party#hasSecondaryDataContact",
+      "party#hasSecondaryMailPostalAddressContact",
+      "party#hasSecondaryPhoneContact",
+      "party#hasSecondaryRegisteredPostalAddressContact",
+      "party#hasCFTCSegregationEmailContact",
+      "party#hasDfClientValuationEmailContact",
+      "party#hasMailPostalAddressContact",
+      "party#hasOperationalContact",
+      "party#hasOperationalPostalAddressContact",
+      "party#hasSecondaryFaxContact",
+      "party#hasSecondaryPostalAddressContact",
+      "party#hasPointOfContact",
+      "party#bacLegalEntityAcronym",
+      "party#coperAcronym",
+      "party#coperId",
+      "party#gci",
+      "party#mnemonic",
+      "party#coborrowerNonStandardGciId",
+      "party#dun_bradstreet",
+      "party#fundNonStandardGciId",
+      "party#hasDtccId",
+      "party#hasGovernmentIssuedId",
+      "party#hasIdentifier",
+      "party#hasITIN",
+      "party#hasOther",
+      "party#hasTaxIdNumber",
+      "party#marketParticipantId",
+      "party#moodysId",
+      "party#pid",
+      "party#tradedProductsNonStandardGciId",
+      "party#hasEIN",
+      "party#hasOtherGovernmentId",
+      "party#hasPan",
+      "party#hasPassport",
+      "party#hasSocialSecurityNumber",
+      "party#hasTIN",
+      "party#hasValueAddedTaxNumber",
+      "party#hasOtherPhotoId",
+      "party#hasRegistration",
+      "party#hasCCILRegulatoryRecord",
+      "party#hasChild",
+      "party#hasCreditParent",
+      "party#hasEMIRRegulatoryRecord",
+      "party#hasHqGciRelationship",
+      "party#hasParent",
+      "party#hasPartyRelationship",
+      "party#hasPartySuitabilityProfile",
+      "party#hasRelationshipRecord",
+      "party#lei",
+      "party#leiAlias",
+      "party#leiLegalName",
+      "party#hasHKPIRegulatoryRecord",
+      "party#hasLeiRegisteredContact",
+      "party#hasLeiRegisteredPostalAddressContact",
+      "party#hasLeiRegistration",
+      "party#hasFIELRegulatoryRecord",
+      "party#hasFMURegulatoryRecord",
+      "party#leiLegalForm",
+      "party#wccPartyId",
+      "party#japaneseLegalName",
+      "party#countryOfTaxation",
+      "party#creationDate",
+      "party#enterpriseMarketing",
+      "party#fullName",
+      "party#hasAntiMoneyLaunderingCommentsComment",
+      "party#hasCategorizedClassification",
+      "party#hasComment",
+      "party#hasLegalCode",
+      "party#hasProfile",
+      "party#hasRating",
+      "party#id",
+      "party#isInactive",
+      "party#legalName",
+      "party#mixedCaseLegalName",
+      "party#naics",
+      "party#naicsLegal",
+      "party#naicsRisk",
+      "party#previousName",
+      "party#stateOfTaxation",
+      "rating#hasAMLRiskRating",
+      "rating#hasFIRiskRating",
+      "rating#hasGeoRiskRating",
+      "rating#hasMSBRiskRating",
+      "rating#hasUKAMLRating",
+      "rating#hasUSPAAMLRating",
+      "party#businessSystem",
+      "party#clientRegistrationType",
+      "party#hasBusinessSystem",
+      "party#hasFyiCommentsComment",
+      "party#hasLastUpdateUser",
+      "party#hasMeaningUnknownComment",
+      "party#hasRegWEntitySource",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasW8TaxFormCommentsComment",
+      "party#standardAbbreviation",
+      "party#tradestyle",
+      "rating#hasMLTGRating",
+      "rating#hasSNPRating",
+      "cs/core#businessSystem",
+      "party#alias",
+      "party#countryOfDomicile",
+      "party#hasAccountCommentsComment",
+      "party#hasRegWEntityType",
+      "party#isClientExemptClearing",
+      "party#isInternal",
+      "party#sic",
+      "party#hasPartyPriorityStatus",
+      "party#hasStatus",
+      "party#hasCesiumValidityStatus",
+      "party#hasCreditAlertLevelStatus",
+      "party#hasDocumentStatus",
+      "party#hasHumanResourceStatus",
+      "party#hasKycAmlStatus",
+      "party#hasOperationalStatus",
+      "party#hasClientCoverageTeamRecord",
+      "party#hasCorporateActionStatus",
+      "party#hasCRMStatus",
+      "party#hasHierarchyStatus",
+      "party#lcrSubCategory",
+      "party#hasInvestmentGradeClassificationRules",
+      "party#lcrEntityClassification",
+      "party#b3StandardRiskWeight",
+      "party#obligorInternalRiskRating",
+      "party#hasEntityLevelClosure",
+      "party#hasEntityLevelRestriction",
+      "party#hasEntityLevelTradingConstraint",
+      "party#hasJurisdictionLevelClosure",
+      "party#hasJurisdictionLevelRestriction",
+      "party#hasJurisdictionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelClosure",
+      "party#hasLineOfBusinessLevelTradingConstraint",
+      "party#hasTradingConstraint",
+      "party#hasTradingConstraintClosure",
+      "party#hasTradingConstraintRestriction",
+      "party#hasBookingEntityStatus",
+      "party#hasRestrictionClosure",
+      "party#aRelationshipAccountOf",
+      "party#hasCurrentClosure",
+      "party#hasFamilyGciRelationship",
+      "party#hasHierarchyRecord",
+      "party#hasLegalEntity",
+      "party#isSpvSponsorFor",
+      "party#legalParentOf",
+      "party#hasBookingEntity",
+      "party#hasCreditHierarchyRecord",
+      "party#hasCurrentRestriction",
+      "party#hasLiftedClosure",
+      "party#hasLiftedRestriction",
+      "party#hasReportableEntityRelationship",
+      "party#hasTradingExchangeMembership",
+      "party#isDuplicateOf",
+      "party#hasFundManagerLegalEntity",
+      "party#hasHeadquartersLegalEntity",
+      "party#signerForParty",
+      "party#hasSharedTIN",
+      "party#hasSuperFamily",
+      "party#alacraId",
+      "party#coperHedgeFund",
+      "party#nonstandardEntityGci",
+      "party#otherNonStandardGciId",
+      "party#primeBrokerageNonStandardGciId",
+      "party#relatedEntityCoperID",
+      "party#twinNonStandardGciId",
+      "party#bacLegalEntityFxMnemonic",
+      "party#branchNonStandardGciId",
+      "party#cedEntityID",
+      "party#hasDealogicId",
+      "party#hasGciId",
+      "party#hasKdAccountNumber",
+      "party#hasMarkitEntityId",
+      "party#snpId",
+      "party#updateHash",
+      "party#agencyCode",
+      "party#aliceIssuerID",
+      "party#bloombergCompanyTickerExchange",
+      "party#bloombergMortgageServicerCode",
+      "party#bloombergMortgageTrusteeCode",
+      "party#capcoIndexFamilyID",
+      "party#fitchIssuerID",
+      "party#intexDealname",
+      "party#jjkennyTickerSymbol",
+      "party#mortgageIssuerID",
+      "party#secureIssuerID",
+      "party#spEntityID",
+      "party#aliceBondIssuerID",
+      "party#bloombergCompanyCorpTicker",
+      "party#cins",
+      "party#gnmaIssuerNumber",
+      "party#markitClusterID",
+      "party#reutersOrganizationID",
+      "party#bloombergUnderwriterCode",
+      "party#embsIssuerID",
+      "party#tbaAgencyCode",
+      "party#telekursGKKeyIssuerID",
+      "party#temporaryAliceIssuerID"];
+    var x = "", i;
+    x = "<block type='sparql_typedsubject_propertylist'>\
+      <value name='TYPE'>\
+        <block type='variables_get'>\
+          <field name='VAR'>party</field>\
+        </block>\
+      </value>\
+    </block>"
+    for (i=0; i<verbs.length + 6; i++){
+      x = x + " <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+            <block type='sparql_prefixed_iri'>\
+              <field name='PREFIX'>party</field>\
+              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+    document.getElementById("party-party").innerHTML = x  
+  </script> 
+
+   <!-- party:Employee -->
+  <script type="text/javascript">
+      var verbs = 
+      ["operational/provdata#agentName",
+      "operational/provdata#hasCsCertLower",
+      "operational/provdata#hasCsCertProd",
+      "party#hasAMLKYCASIARegionStatusRecord",
+      "party#hasAMLKYCCARegionStatusRecord",
+      "party/disclosed#hasDisclosedInformationRecord",
+      "party#hasAMLKYCEMEARegionStatusRecord",
+      "party#hasAMLKYCLATAMRegionStatusRecord",
+      "party#hasAMLKYCUSRegionStatusRecord",
+      "operational/provdata#hasCsCertUAT",
+      "operational/provdata#updatedByFeed",
+      "party#hasAMLKYCSpecialProductStatusRecord",
+      "party#hasBusinessContact",
+      "party#hasBusinessFaxContact",
+      "party#hasBusinessPhoneContact",
+      "party#hasContactMechanism",
+      "party#hasHeadquartersContact",
+      "party#hasHeadquartersPostalAddressContact",
+      "party#hasLegalContact",
+      "party#hasOtherContact",
+      "party#hasPrimaryContact",
+      "party#hasPrimaryDataContact",
+      "party#hasPrimaryFaxContact",
+      "party#hasPrimaryPhoneContact",
+      "party#hasRegisteredContact",
+      "party#hasRegisteredPostalAddressContact",
+      "party#hasResidentialContact",
+      "party#hasSalesContact",
+      "party#hasSecondaryBeeperContact",
+      "party#hasSecondaryContact",
+      "party#hasSecondaryMobilecellContact",
+      "party#hasLegalPostalAddressContact",
+      "party#hasMailContact",
+      "party#hasOtherWebsiteAddressContact",
+      "party#hasPhysicalContact",
+      "party#hasPhysicalPostalAddressContact",
+      "party#hasPrimaryBeeperContact",
+      "party#hasPrimaryMobilecellContact",
+      "party#hasSecondaryDataContact",
+      "party#hasSecondaryMailPostalAddressContact",
+      "party#hasSecondaryPhoneContact",
+      "party#hasSecondaryRegisteredPostalAddressContact",
+      "party#hasBusinessEmailAddressContact",
+      "party#hasBusinessPostalAddressContact",
+      "party#hasCFTCSegregationEmailContact",
+      "party#hasDfClientValuationEmailContact",
+      "party#hasMailPostalAddressContact",
+      "party#hasOperationalContact",
+      "party#hasOperationalPostalAddressContact",
+      "party#hasSecondaryFaxContact",
+      "party#hasSecondaryPostalAddressContact",
+      "cs/core#isInactive",
+      "party#coperName",
+      "party#countryOfTaxation",
+      "party#creationDate",
+      "party#dateOfBirth",
+      "party#enterpriseMarketing",
+      "party#firstName",
+      "party#fullName",
+      "party#hasAntiMoneyLaunderingCommentsComment",
+      "party#hasCategorizedClassification",
+      "party#hasComment",
+      "party#hasLegalCode",
+      "party#hasProfile",
+      "party#hasRating",
+      "party#id",
+      "party#isInactive",
+      "party#legalName",
+      "party#mixedCaseLegalName",
+      "party#naics",
+      "party#naicsLegal",
+      "party#naicsRisk",
+      "party#nameSuffix",
+      "party#previousName",
+      "party#stateOfTaxation",
+      "rating#hasAMLRiskRating",
+      "rating#hasFIRiskRating",
+      "rating#hasGeoRiskRating",
+      "rating#hasMSBRiskRating",
+      "rating#hasUKAMLRating",
+      "rating#hasUSPAAMLRating",
+      "party#businessSystem",
+      "party#clientRegistrationType",
+      "party#countryOfCitizenship",
+      "party#hasBusinessSystem",
+      "party#hasFyiCommentsComment",
+      "party#hasJob",
+      "party#hasLastUpdateUser",
+      "party#hasMeaningUnknownComment",
+      "party#hasRegWEntitySource",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasW8TaxFormCommentsComment",
+      "party#middleInitial",
+      "party#preferredName",
+      "party#standardAbbreviation",
+      "party#tradestyle",
+      "rating#hasMLTGRating",
+      "rating#hasSNPRating",
+      "cs/core#businessSystem",
+      "party#alias",
+      "party#countryOfDomicile",
+      "party#hasAccountCommentsComment",
+      "party#hasRegWEntityType",
+      "party#isClientExemptClearing",
+      "party#isInternal",
+      "party#lastName",
+      "party#hasPointOfContact",
+      "party#hasLineOfBusinessLevelRestriction",
+      "party#hasProductLevelClosure",
+      "party#hasProductLevelRestriction",
+      "party#hasProductLevelTradingConstraint",
+      "party#hasRegionLevelClosure",
+      "creditrisk#hasExposureManagementClassification",
+      "creditrisk#hasPartyCreditMasterSubOverrideRecord",
+      "creditrisk#secondaryExposureManagementClassification",
+      "party#hasClassification",
+      "party#hasEmirDelegationPreference",
+      "party#hasEmirUltimateBeneficiaryCiciCodeComment",
+      "rating#hasMiFIDRating",
+      "creditrisk#exposureManagementClassification",
+      "party#doddFrankCftcClassification",
+      "party#doddFrankClassification",
+      "party#middleName",
+      "party#prefix",
+      "party#sic",
+      "rating#hasFitchCreditRating",
+      "rating#hasMoodysCreditRating",
+      "party#countryOfNationality",
+      "party#stateOfDomicile",
+      "party#salesIndustry",
+      "party#bankruptcyType",
+      "party#isFiduciary",
+      "party#isTrustOnly",
+      "party#isCreditLeveragedLendingBorrower",
+      "party#isHighlyLeveragedTransactionBorrower",
+      "party#creditExposureStrategy",
+      "party#issuerCountryOfRisk",
+      "party#concentrationLimitLoanEffectiveDate",
+      "party#concentrationLimitIntradayAmount",
+      "party#concentrationLimitIntradayEffectiveDate",
+      "party#concentrationLimitIntradayExpirationDate",
+      "party#concentrationLimitLoanAmount",
+      "party#concentrationLimitLoanExpirationDate",
+      "party#obligorRiskRating",
+      "party#initialRiskRating",
+      "fatca#giinValidationDate",
+      "fatca#hasContactMechanism",
+      "fatca#hasGiinStatus",
+      "fatca#isPresumedWithholding",
+      "party/prefatca#hasPreFATCAClientTaxInformationRecord",
+      "party#doddFrankPedSecClassification",
+      "party#doddFrankPedClassification",
+      "party#hasThirdPartyControlPersonComment",
+      "party#hasTWPIRegulatoryRecord",
+      "party#dun_bradstreet",
+      "party#fundNonStandardGciId",
+      "party#hasDtccId",
+      "party#hasGovernmentIssuedId",
+      "party#hasIdentifier",
+      "party#hasITIN",
+      "party#hasOther",
+      "party#hasTaxIdNumber",
+      "party#marketParticipantId",
+      "party#mlWorkerID",
+      "party#moodysId",
+      "party#nbkid",
+      "party#pid",
+      "party#tradedProductsNonStandardGciId",
+      "party#alacraId",
+      "party#coperHedgeFund",
+      "party#hasEIN",
+      "party#hasOtherGovernmentId",
+      "party#hasPan",
+      "party#hasPassport",
+      "party#hasSocialSecurityNumber",
+      "party#hasTIN",
+      "party#hasValueAddedTaxNumber",
+      "party#nonstandardEntityGci",
+      "party#hasOtherPhotoId",
+      "party#hasRegistration",
+      "party#bacLegalEntityAcronym",
+      "party#coperAcronym",
+      "party#coperId",
+      "party#gci",
+      "party#mnemonic",
+      "party#bacPersonNumber",
+      "party#coborrowerNonStandardGciId",
+      "party#commonAssociateIdentifier",
+      "fatca#giinReceiptDate",
+      "fatca#hasIndiciaStatus",
+      "fatca#hasTaxInformation",
+      "fatca#isPresumedChapter3Withholding",
+      "fatca#giinNumber",
+      "fatca#giinReExaminationDate",
+      "fatca#hasComments",
+      "fatca#hasFatcaClientComments",
+      "fatca#isPresumedCh61Withholding",
+      "fatca#hasIndiciaInformation",
+      "syntax-ns#type",
+      "party#belgiumIDCardNumber",
+      "party#hasBelgiumIDCardNumber",
+      "party#hasClientCoverageTeamRecord",
+      "party#hasCorporateActionStatus",
+      "party#hasCRMStatus",
+      "party#hasHierarchyStatus",
+      "party#employeeDateOfBirth",
+      "party#countryofNationality",
+      "party#lcrSubCategory",
+      "party#hasInvestmentGradeClassificationRules",
+      "party#lcrEntityClassification",
+      "party#b3StandardRiskWeight",
+      "party#obligorInternalRiskRating",
+      "party#hasEntityLevelClosure",
+      "party#hasEntityLevelRestriction",
+      "party#hasEntityLevelTradingConstraint",
+      "party#hasJurisdictionLevelClosure",
+      "party#hasJurisdictionLevelRestriction",
+      "party#hasJurisdictionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelClosure",
+      "party#hasLineOfBusinessLevelTradingConstraint",
+      "party#hasTradingConstraint",
+      "party#hasTradingConstraintClosure",
+      "party#hasTradingConstraintRestriction",
+      "party#hasBookingEntityLevelClosure",
+      "party#hasBookingEntityLevelRestriction",
+      "party#hasBookingEntityLevelTradingConstraint",
+      "party#hasRegionLevelRestriction",
+      "party#hasRegionLevelTradingConstraint",
+      "party#hasCCILRegulatoryRecord",
+      "party#hasChild",
+      "party#hasCreditParent",
+      "party#hasEMIRRegulatoryRecord",
+      "party#hasHqGciRelationship",
+      "party#hasParent",
+      "party#hasPartyRelationship",
+      "party#hasPartySuitabilityProfile",
+      "party#otherNonStandardGciId",
+      "party#primeBrokerageNonStandardGciId",
+      "party#relatedEntityCoperID",
+      "party#twinNonStandardGciId",
+      "party#bacLegalEntityFxMnemonic",
+      "party#branchNonStandardGciId",
+      "party#cedEntityID",
+      "party#hasDealogicId",
+      "party#hasGciId",
+      "party#hasKdAccountNumber",
+      "party#hasMarkitEntityId",
+      "party#snpId",
+      "party#updateHash",
+      "party#agencyCode",
+      "party#aliceIssuerID",
+      "party#bloombergCompanyTickerExchange",
+      "party#bloombergMortgageServicerCode",
+      "party#bloombergMortgageTrusteeCode",
+      "party#capcoIndexFamilyID",
+      "party#fitchIssuerID",
+      "party#intexDealname",
+      "party#jjkennyTickerSymbol",
+      "party#mortgageIssuerID",
+      "party#secureIssuerID",
+      "party#spEntityID",
+      "party#aliceBondIssuerID",
+      "party#bloombergCompanyCorpTicker",
+      "party#cins",
+      "party#gnmaIssuerNumber",
+      "party#markitClusterID",
+      "party#reutersOrganizationID",
+      "party#bloombergUnderwriterCode",
+      "party#embsIssuerID",
+      "party#tbaAgencyCode",
+      "party#telekursGKKeyIssuerID",
+      "party#temporaryAliceIssuerID",
+      "party#wccPartyId",
+      "party#japaneseLegalName",
+      "party#hasBookingEntityStatus",
+      "party#hasPartyPriorityStatus",
+      "party#hasPersonsManager",
+      "party#hasRelationshipRecord",
+      "party#hasRestrictionClosure",
+      "party#hasStatus",
+      "party#lei",
+      "party#leiAlias",
+      "party#leiLegalName",
+      "party#aRelationshipAccountOf",
+      "party#hasAssociateStatus",
+      "party#hasCesiumValidityStatus",
+      "party#hasCreditAlertLevelStatus",
+      "party#hasCurrentClosure",
+      "party#hasDocumentStatus",
+      "party#hasFamilyGciRelationship",
+      "party#hasHierarchyRecord",
+      "party#hasHKPIRegulatoryRecord",
+      "party#hasLegalEntity",
+      "party#hasLeiRegisteredContact",
+      "party#hasLeiRegisteredPostalAddressContact",
+      "party#hasLeiRegistration",
+      "party#hasFIELRegulatoryRecord",
+      "party#hasFMURegulatoryRecord",
+      "party#leiLegalForm",
+      "party#hasHumanResourceStatus",
+      "party#hasKycAmlStatus",
+      "party#hasOperationalStatus",
+      "party#isPartOfCompanyCost_Center",
+      "party#isSpvSponsorFor",
+      "party#legalParentOf",
+      "party#hasBookingEntity",
+      "party#hasCreditHierarchyRecord",
+      "party#hasCurrentRestriction",
+      "party#hasLiftedClosure",
+      "party#hasLiftedRestriction",
+      "party#hasReportableEntityRelationship",
+      "party#hasTradingExchangeMembership",
+      "party#isDuplicateOf",
+      "party#hasFundManagerLegalEntity",
+      "party#hasHeadquartersLegalEntity",
+      "party#signerForParty",
+      "party#hasSharedTIN",
+      "party#hasSuperFamily"];
+    var x = "", i;
+    x = "<block type='sparql_typedsubject_propertylist'>\
+      <value name='TYPE'>\
+        <block type='variables_get'>\
+          <field name='VAR'>party</field>\
+        </block>\
+      </value>\
+    </block>"
+    for (i=0; i<verbs.length + 6; i++){
+      x = x + " <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+            <block type='sparql_prefixed_iri'>\
+              <field name='PREFIX'>employee</field>\
+              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+    document.getElementById("party-employee").innerHTML = x  
+  </script> 
+  
+  <!-- party:Organization -->
+  <script type="text/javascript">
+      var verbs = 
+      ["party#hasAMLKYCASIARegionStatusRecord",
+      "party#hasAMLKYCCARegionStatusRecord",
+      "party/disclosed#hasDisclosedInformationRecord",
+      "party#hasAMLKYCEMEARegionStatusRecord",
+      "party#hasAMLKYCLATAMRegionStatusRecord",
+      "party#hasAMLKYCUSRegionStatusRecord",
+      "party#hasAMLKYCSpecialProductStatusRecord",
+      "party#hasCertificateOfGoodStanding",
+      "fatca#giinReceiptDate",
+      "fatca#hasIndiciaStatus",
+      "fatca#hasTaxInformation",
+      "fatca#isPresumedChapter3Withholding",
+      "fatca#giinNumber",
+      "fatca#giinReExaminationDate",
+      "fatca#hasComments",
+      "fatca#hasFatcaClientComments",
+      "fatca#isPresumedCh61Withholding",
+      "fatca#hasIndiciaInformation",
+      "cs/core#isInactive",
+      "party#coperName",
+      "party#hasBusinessContact",
+      "party#hasBusinessFaxContact",
+      "party#hasContactMechanism",
+      "party#hasHeadquartersContact",
+      "party#hasHeadquartersPostalAddressContact",
+      "party#hasLegalContact",
+      "party#hasOtherContact",
+      "party#hasOtherPhoneContact",
+      "party#hasOtherPostalAddressContact",
+      "party#hasPrimaryContact",
+      "party#hasPrimaryDataContact",
+      "party#hasPrimaryFaxContact",
+      "party#hasPrimaryPhoneContact",
+      "party#hasRegisteredContact",
+      "party#hasRegisteredPostalAddressContact",
+      "party#hasResidentialContact",
+      "party#hasSalesContact",
+      "party#hasSecondaryBeeperContact",
+      "party#hasSecondaryContact",
+      "party#hasSecondaryMobilecellContact",
+      "party#hasLegalPostalAddressContact",
+      "party#hasMailContact",
+      "party#hasOtherEmailAddressContact",
+      "party#hasOtherWebsiteAddressContact",
+      "party#hasPhysicalContact",
+      "party#hasPhysicalPostalAddressContact",
+      "party#hasPrimaryBeeperContact",
+      "party#hasPrimaryMobilecellContact",
+      "party#hasRegisteredPhoneContact",
+      "party#hasSecondaryDataContact",
+      "party#hasSecondaryMailPostalAddressContact",
+      "party#hasSecondaryPhoneContact",
+      "party#hasSecondaryRegisteredPostalAddressContact",
+      "party#hasBusinessWebsiteAddressContact",
+      "party#hasCFTCSegregationEmailAddressContact",
+      "party#hasCFTCSegregationEmailContact",
+      "party#hasDfClientValuationEmailContact",
+      "party#hasDfClientValuationEmailEmailAddressContact",
+      "party#hasHeadquartersPhoneContact",
+      "party#hasMailPostalAddressContact",
+      "party#hasOperationalContact",
+      "party#hasOperationalPhoneContact",
+      "party#hasOperationalPostalAddressContact",
+      "party#hasSecondaryFaxContact",
+      "party#hasSecondaryPostalAddressContact",
+      "party#hasOtherPointOfContact",
+      "party#hasPointOfContact",
+      "party#bac10DotParentOf",
+      "party#exchangeIsClearedBy",
+      "party#hasCCILRegulatoryRecord",
+      "party#hasChild",
+      "party#hasCreditParent",
+      "party#hasEMIRRegulatoryRecord",
+      "party#hasFinancialRegulator",
+      "party#hasFinancialRegulatorAmlKyc",
+      "party#hasHqGciRelationship",
+      "party#hasParent",
+      "party#hasPartyRelationship",
+      "party#hasPartySuitabilityProfile",
+      "party#hasRelationshipRecord",
+      "party#hasTradingExchange",
+      "party#leiLegalName",
+      "party#aRelationshipAccountOf",
+      "party#hasFamilyGciRelationship",
+      "party#hasFinancialRegulatorOther",
+      "party#hasHierarchyRecord",
+      "party#hasHKPIRegulatoryRecord",
+      "party#hasLegalEntity",
+      "party#hasLegalHierarchyRecord",
+      "party#hasLegalParent",
+      "party#hasLeiRegisteredContact",
+      "party#hasLeiRegisteredPostalAddressContact",
+      "party#hasLeiRegistration",
+      "party#hasMember",
+      "party#hasMergedWith",
+      "party#hasSurvivedAcquisitionBy",
+      "party#isConsolidatedWith",
+      "party#isSpvSponsorFor",
+      "party#legalParentOf",
+      "party#leiAnglicized",
+      "party#leiPreviousLegalName",
+      "party#hasFIELRegulatoryRecord",
+      "party#hasFMURegulatoryRecord",
+      "party#hasMifidRegulationRecord",
+      "party#leiLegalForm",
+      "party#bacLegalEntityAcronym",
+      "party#coperAcronym",
+      "party#coperId",
+      "party#gci",
+      "party#mnemonic",
+      "party#alertAcronym",
+      "party#bicCode",
+      "party#coborrowerNonStandardGciId",
+      "party#coperExchangeReferenceDataId",
+      "party#cusip",
+      "party#dun_bradstreet",
+      "party#fundNonStandardGciId",
+      "party#hasCertificateOfIncorporation",
+      "party#hasCertificateOfRegistration",
+      "party#hasDtccId",
+      "party#hasGovernmentIssuedBusinessLicense",
+      "party#hasGovernmentIssuedId",
+      "party#hasIdentifier",
+      "party#hasITIN",
+      "party#hasOther",
+      "party#hasTaxIdNumber",
+      "party#marketParticipantId",
+      "party#moodysId",
+      "party#oracleId",
+      "party#pid",
+      "party#totalReturnSwapCollateralAgreementNonStandardGciId",
+      "party#tradedProductsNonStandardGciId",
+      "party#accountSubAccountNonStandardGciId",
+      "party#alacraId",
+      "party#bankersAlmanacId",
+      "party#conduitsNonStandardGciId",
+      "party#coperHedgeFund",
+      "party#hasArticlesOfIncorporation",
+      "party#hasEIN",
+      "party#hasOtherGovernmentId",
+      "party#hasPan",
+      "party#hasPassport",
+      "party#hasSocialSecurityNumber",
+      "party#hasTIN",
+      "party#hasValueAddedTaxNumber",
+      "party#hasAuthorityToConductBusiness",
+      "party#hasMemorandumOfUnderstanding",
+      "party#hasOtherPhotoId",
+      "party#hasQI_EIN",
+      "party#hasRegistration",
+      "party#countryOfTaxation",
+      "party#creationDate",
+      "party#enterpriseMarketing",
+      "party#formationDate",
+      "party#fullName",
+      "party#hasAntiMoneyLaunderingCommentsComment",
+      "party#hasCategorizedClassification",
+      "party#hasComment",
+      "party#hasLegalCode",
+      "party#hasProfile",
+      "party#hasRating",
+      "party#hasTradingDesignation",
+      "party#id",
+      "party#isInactive",
+      "party#isRegulated",
+      "party#legalName",
+      "party#mixedCaseLegalName",
+      "party#naics",
+      "party#naicsLegal",
+      "party#naicsRisk",
+      "party#previousName",
+      "party#product",
+      "party#product",
+      "party#stateOfTaxation",
+      "rating#hasAMLRiskRating",
+      "rating#hasFIRiskRating",
+      "rating#hasGeoRiskRating",
+      "rating#hasMSBRiskRating",
+      "rating#hasUKAMLRating",
+      "rating#hasUSPAAMLRating",
+      "party#businessSystem",
+      "party#clientRegistrationType",
+      "party#countryOfIncorporation",
+      "party#hasBusinessSystem",
+      "party#hasFyiCommentsComment",
+      "party#hasLastUpdateUser",
+      "party#hasMeaningUnknownComment",
+      "party#hasRegWEntitySource",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasRelatedEntitySourceOfWealthComment",
+      "party#hasW8TaxFormCommentsComment",
+      "party#incorporationDate",
+      "party#isExchangeListed",
+      "party#legalForm",
+      "party#standardAbbreviation",
+      "party#tradestyle",
+      "rating#hasMLTGRating",
+      "rating#hasSNPRating",
+      "cs/core#businessSystem",
+      "party#alias",
+      "party#businessClassification",
+      "party#countryOfDomicile",
+      "party#hasAccountCommentsComment",
+      "party#hasIAPreferredFundSpecifierType",
+      "party#hasRegWEntityType",
+      "party#isClientExemptClearing",
+      "party#isInternal",
+      "party#operationalName",
+      "party#shortName",
+      "party#sic",
+      "fatca#giinValidationDate",
+      "fatca#hasContactMechanism",
+      "fatca#hasGiinStatus",
+      "fatca#isPresumedWithholding",
+      "party/prefatca#hasPreFATCAClientTaxInformationRecord",
+      "party#hasAffiliateOfaResponsibleCanadianPerson",
+      "party#hasAgreementToTheReportingPartyRules",
+      "party#hasCFTCSegregationContactName",
+      "party#hasConsentToDisclosureToRegulatorsAndTradeRepositories",
+      "party#hasDeaComment",
+      "party#hasDoddFrankVolckerCustomerClassification",
+      "party#hasEmirAlternativeInvestmentFund",
+      "party#hasEmirDelegationPreferenceCredit",
+      "party#hasEmirDelegationPreferenceETD",
+      "party#hasEmirDelegationPreferenceRates",
+      "party#hasEmirThirdCountryEntityNonFinCounterpartyClrThrshld",
+      "party#hasFiduciaryComment",
+      "party#hasMasAssetClass",
+      "party#hasMasClientPreference",
+      "party#hasMasDelegationMarkitWireReport",
+      "party#isMasBank",
+      "party#limitOrderConsent",
+      "party#cftcMarketParticipantType",
+      "party#cftcPhaseInEntityCategory",
+      "party#cftcReportingDeterminationOverride",
+      "party#doddFrankPedClassification",
+      "party#doddFrankRcpacOverrideClassification",
+      "party#hasASICClientReporting",
+      "party#hasCFTCSegregationContactTitle",
+      "party#hasEmirDelegationPreferenceCommodities",
+      "party#hasEmirDelegationPreferenceFX",
+      "party#hasEmirOutofScopeEntity",
+      "party#hasEmirPartExptSupPubSectorEntitiesClrThrd",
+      "party#hasEmirPensionSchemeArrangement",
+      "party#hasEmirTradingCapacity",
+      "party#hasEmirTypeofPensionSchemeArrangement",
+      "party#hasEmirUltimateBeneficiaryComment",
+      "party#hasGuarantorComment",
+      "party#hasThirdPartyControlPersonComment",
+      "party#hasTWPIRegulatoryRecord",
+      "party#tradeAwayConsent",
+      "party#hasMifidRegulationRecordInRegulatory",
+      "creditrisk#hasCreditMasterSubOverrideRecord",
+      "creditrisk#hasExposureManagementClassification",
+      "creditrisk#hasPartyCreditMasterSubOverrideRecord",
+      "creditrisk#secondaryExposureManagementClassification",
+      "party#doddFrankEcpClassification",
+      "party#doddFrankFeClassification",
+      "party#doddFrankRcpOverrideClassification",
+      "party#doddFrankUniqueTradeIdentifierOverrideClassification",
+      "party#hasCanadianPersonRepresentation",
+      "party#hasClassification",
+      "party#hasEmirCommercialActivity",
+      "party#hasEmirDelegationPreference",
+      "party#hasEmirDelegationPreferenceEquities",
+      "party#hasEmirInterestRateProductsClearingCategory",
+      "party#hasEmirMarkitWireReport",
+      "party#hasEmirNonFinCounterpartyClrThrshld",
+      "party#hasEmirOutofScopeEntityType",
+      "party#hasEmirPensionSchemeArrangementExemption",
+      "party#hasEmirUltimateBeneficiaryCiciCodeComment",
+      "party#hasEmirUseofPensionArrangementExemption",
+      "party#hasQirComment",
+      "party#hasRegisteredToTradeDerivatives",
+      "party#isBestExecutionRequired",
+      "party#isEmirUltimateBeneficiary",
+      "party#isHkmaLicensedBank",
+      "party#isRussianReportableEntity",
+      "party#secMarketParticipantType",
+      "party#secPhaseInEntityCategory",
+      "rating#hasMiFIDRating",
+      "creditrisk#exposureManagementClassification",
+      "party/volcker#hasCustomerClassificationOverrideRecord",
+      "party#cftcLimitedDesignationAssetClass",
+      "party#doddFrankCftcClassification",
+      "party#doddFrankClassification",
+      "party#doddFrankPedSecClassification",
+      "party#doddFrankSetClassification",
+      "party#emirCategory",
+      "party#emirFinancialCounterpartyType",
+      "party#hasAdditionalCovenantReReportingResponsibilityJurisdiction",
+      "rating#hasFitchCreditRating",
+      "rating#hasMoodysCreditRating",
+      "party#assetsUnderManagement",
+      "party#stateOfDomicile",
+      "party#stateOfIncorporation",
+      "party#salesIndustry",
+      "party#bankruptcyType",
+      "party#isFiduciary",
+      "party#isTrustOnly",
+      "party#isCreditLeveragedLendingBorrower",
+      "party#isHighlyLeveragedTransactionBorrower",
+      "party#creditExposureStrategy",
+      "party#issuerCountryOfRisk",
+      "party#concentrationLimitLoanEffectiveDate",
+      "party#concentrationLimitIntradayAmount",
+      "party#concentrationLimitIntradayEffectiveDate",
+      "party#concentrationLimitIntradayExpirationDate",
+      "party#concentrationLimitLoanAmount",
+      "party#concentrationLimitLoanExpirationDate",
+      "party#obligorRiskRating",
+      "party#initialRiskRating",
+      "party#hasExchangeInvestors",
+      "party#hasClientCoverageTeamRecord",
+      "party#hasHierarchyStatus",
+      "party#hasPartyIntermediaryStatus",
+      "party#hasS3DAlias",
+      "party#hasSECExceptionAnnualFilingStatus",
+      "party#hasTaxExemptStatus",
+      "party#settlementLocationCode",
+      "party#preferredSettlementLocationForProducts",
+      "party#preferredSettlementLocationForProducts",
+      "party#psetBIC",
+      "party#lcrSubCategory",
+      "party#hasInvestmentGradeClassificationRules",
+      "party#lcrEntityClassification",
+      "party#b3StandardRiskWeight",
+      "party#obligorInternalRiskRating",
+      "party#placeOfSettlementMarket",
+      "party#hasEntityLevelClosure",
+      "party#hasEntityLevelRestriction",
+      "party#hasEntityLevelTradingConstraint",
+      "party#hasJurisdictionLevelClosure",
+      "party#hasJurisdictionLevelRestriction",
+      "party#hasJurisdictionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelClosure",
+      "party#hasLineOfBusinessLevelTradingConstraint",
+      "party#hasTradingConstraint",
+      "party#hasTradingConstraintClosure",
+      "party#hasTradingConstraintRestriction",
+      "party#hasBookingEntityLevelClosure",
+      "party#hasBookingEntityLevelRestriction",
+      "party#hasBookingEntityLevelTradingConstraint",
+      "party#hasRegionLevelRestriction",
+      "party#hasRegionLevelTradingConstraint",
+      "party#hasLineOfBusinessLevelRestriction",
+      "party#hasProductLevelClosure",
+      "party#hasProductLevelRestriction",
+      "party#hasProductLevelTradingConstraint",
+      "party#hasRegionLevelClosure",
+      "party#hasBookingEntityStatus",
+      "party#hasCFTCExceptionAnnualFilingStatus",
+      "party#hasPartyPriorityStatus",
+      "party#hasRestrictionClosure",
+      "party#hasSanctionsCheckStatus",
+      "party#hasStatus",
+      "party#hasCesiumValidityStatus",
+      "party#hasCreditAlertLevelStatus",
+      "party#hasCurrentClosure",
+      "party#hasDocumentStatus",
+      "party#hasHumanResourceStatus",
+      "party#hasKycAmlStatus",
+      "party#hasOperationalStatus",
+      "party#hasSECExemptionExceptionStatus",
+      "party#hasTradingExchangeRegulatorStatus",
+      "party#hasBookingEntity",
+      "party#hasCorporateActionStatus",
+      "party#hasCreditHierarchyRecord",
+      "party#hasCRMStatus",
+      "party#hasCurrentRestriction",
+      "party#hasLiftedClosure",
+      "party#hasLiftedRestriction",
+      "party#hasPrimaryMember",
+      "party#hasReportableEntity",
+      "party#hasReportableEntityRelationship",
+      "party#hasSpvSponsor",
+      "party#hasTradingExchangeMembership",
+      "party#isAcquiredBy",
+      "party#isDuplicateOf",
+      "party#hasFundManagerLegalEntity",
+      "party#hasHeadquartersLegalEntity",
+      "party#signerForParty",
+      "party#hasSharedTIN",
+      "party#hasSuperFamily",
+      "party#lei",
+      "party#leiAlias",
+      "party#debtIStar",
+      "party#fitchId",
+      "party#fundManagerNonStandardGciId",
+      "party#interestOnLawyerTrustAccountsNonStandardGciId",
+      "party#issuerNonStandardGciId",
+      "party#ledId",
+      "party#legacyFitchId",
+      "party#nonstandardEntityGci",
+      "party#otherNonStandardGciId",
+      "party#primeBrokerageNonStandardGciId",
+      "party#regulatorCode",
+      "party#relatedEntityCoperID",
+      "party#secLargeTraderId",
+      "party#sedol",
+      "party#sibCode",
+      "party#twinNonStandardGciId",
+      "party#afslnonreportable",
+      "party#afslreportable",
+      "party#bacLegalEntityFxMnemonic",
+      "party#bloombergId",
+      "party#bookingEntityCode",
+      "party#branchNonStandardGciId",
+      "party#cedEntityID",
+      "party#crdNumber",
+      "party#hasDealogicId",
+      "party#hasGciId",
+      "party#hasKdAccountNumber",
+      "party#hasMarkitEntityId",
+      "party#isinID",
+      "party#mcdId",
+      "party#nfaId",
+      "party#nsdId",
+      "party#secCentralKeyIndex",
+      "party#securitizationFinanceGroupNonStandardGciId",
+      "party#snpId",
+      "party#tradingExchangeCode",
+      "party#ultLargeTraderId",
+      "party#updateHash",
+      "party#fusionPartyID",
+      "party#agencyCode",
+      "party#aliceIssuerID",
+      "party#bloombergCompanyTickerExchange",
+      "party#bloombergMortgageServicerCode",
+      "party#bloombergMortgageTrusteeCode",
+      "party#capcoIndexFamilyID",
+      "party#fitchIssuerID",
+      "party#intexDealname",
+      "party#jjkennyTickerSymbol",
+      "party#mortgageIssuerID",
+      "party#secureIssuerID",
+      "party#spEntityID",
+      "party#aliceBondIssuerID",
+      "party#bloombergCompanyCorpTicker",
+      "party#cins",
+      "party#gnmaIssuerNumber",
+      "party#markitClusterID",
+      "party#reutersOrganizationID",
+      "party#bloombergUnderwriterCode",
+      "party#embsIssuerID",
+      "party#tbaAgencyCode",
+      "party#telekursGKKeyIssuerID",
+      "party#temporaryAliceIssuerID",
+      "party#bicCode8",
+      "party#kmvPartyId",
+      "party#wccPartyId",
+      "party#financeInternalEntityId",
+      "party#japaneseLegalName"];
+    var x = "", i;
+    x = "<block type='sparql_typedsubject_propertylist'>\
+      <value name='TYPE'>\
+        <block type='variables_get'>\
+          <field name='VAR'>party</field>\
+        </block>\
+      </value>\
+    </block>"
+    for (i=0; i<verbs.length + 6; i++){
+      x = x + " <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+            <block type='sparql_prefixed_iri'>\
+              <field name='PREFIX'>organization</field>\
+              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
+            <shadow type='variables_get'>\
+              <field name='VAR'>insert value</field>\
+            </shadow>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+    document.getElementById("party-organization").innerHTML = x  
+  </script> 
+
+  <!-- end my code -->
+
+
+  <div id="blocklyDiv">
+  </div>
 
   <div id="dialogShadow" class="dialogAnimate"></div>
   <div id="dialogBorder"></div>
