@@ -56,448 +56,38 @@
     <category name="&#xf106; Query" colour="290">
       <block type="sparql_execution_endpoint_query">
         <field name="ENDPOINT">http://refdata.bankofamerica.com</field>
-        <field name="LIMIT">10</field>
-      </block>
-      <block type="sparql_execution_endpoint_query">
-        <field name="ENDPOINT">http://refdata.bankofamerica.com</field>
         <field name="LIMIT">5</field>
       </block>
-      <block type="sparql_execution_endpoint_query">
-        <field name="ENDPOINT">http://refdata.bankofamerica.com</field>
-        <field name="LIMIT">1</field>
-      </block>
     </category>
     
-    <category id="patterns-data" name="&#xf104; Patterns" colour="120">
-
-
-    </category>
-
-
-
-
-
-    <category name="&#xf101; Compose" colour="260">
-      <block type="sparql_union"></block>
-      <block type="sparql_optional"></block>
-      <block type="sparql_graph">
-        <value name="GRAPHNAME">
-          <block type="variables_get">
-            <field name="VAR">graph</field>
-          </block>
-        </value>
-      </block>
+    <category id="patterns-data" name="&#xf104; Containers" colour="120">
     </category>
     
+    <category name="&#xf10b; Variables" colour="330" custom="VARIABLE">
+    </category>
+
     <sep></sep>
 
     <!-- My code -->
     <!-- Start Vocab-->
 
-    <category name="&#xf100; Vocab" colour="20">
-      <category id = "account-vocab" name="• Account" colour="1">
+    <category name="&#xf100; Vocab" colour="50">
+      <category id = "account-vocab" name="• Account" colour="60">
       </category>
-      <category id = "book-vocab" name="• Book" colour="2">
+      <category id = "book-vocab" name="• Book" colour="70">
       </category>
-      <category id = "party-vocab" name="• Party" colour="3">
-        <category id = "party-party" name="• party:Party" colour="4">
+      <category id = "party-vocab" name="• Party" colour="80">
+        <category id = "party-party" name="• party:Party" colour="90">
         </category>
-        <category id = "party-employee" name="• party:Employee" colour="5">
+        <category id = "party-employee" name="• party:Employee" colour="100">
         </category>
-        <category id = "party-organization" name="• party:Organization" colour="6">
+        <category id = "party-organization" name="• party:Organization" colour="110">
         </category>
+      </category>
+      <category id = "basic-vocab" name="• Basic" colour="120">
       </category>
     </category>
     <!-- End Vocab-->
-
-
-    <category name="&#xf100; Temp" colour="20">
-
-      <category name="• Account">
-        <block type="sparql_typedsubject_propertylist">
-          <value name="TYPE">
-            <block type="variables_get">
-              <field name="VAR">account</field>
-            </block>
-          </value>
-        </block>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCASIARegionStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCCARegionStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party/disclosed#hasDisclosedInformationRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCEMEARegionStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCLATAMRegionStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCUSRegionStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasAMLKYCSpecialProductStatusRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">creditrisk#hasExposureManagementClassification</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">creditrisk#hasPartyCreditMasterSubOverrideRecord</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">creditrisk#secondaryExposureManagementClassification</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasClassification</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasEmirDelegationPreference</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">account</field>
-              <field name="LOCAL_NAME">party#hasEmirUltimateBeneficiaryCiciCodeComment</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">insert value</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-      </category>
-
-
-
-
-      <category name="• Dummy Tab 2">
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">dcterms</field>
-              <field name="LOCAL_NAME">title</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">title</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">dcterms</field>
-              <field name="LOCAL_NAME">subject</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">subject</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">dcterms</field>
-              <field name="LOCAL_NAME">creator</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">creator</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">dcterms</field>
-              <field name="LOCAL_NAME">publisher</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">publisher</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
-      <category name="• Dummy Tab 3">
-        <block type="sparql_subject_propertylist">
-          <value name="SUBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">agent</field>
-            </shadow>
-          </value>
-          <statement name="PROPERTY_LIST">
-            <block type="sparql_verb_object">
-              <value name="VERB">
-                <block type="sparql_prefixed_iri">
-                  <field name="PREFIX">rdf</field>
-                  <field name="LOCAL_NAME">type</field>
-                </block>
-              </value>
-              <value name="OBJECT">
-                <block type="sparql_prefixed_iri">
-                  <field name="PREFIX">foaf</field>
-                  <field name="LOCAL_NAME">Agent</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_subject_propertylist">
-          <value name="SUBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">person</field>
-            </shadow>
-          </value>
-          <statement name="PROPERTY_LIST">
-            <block type="sparql_verb_object">
-              <value name="VERB">
-                <block type="sparql_prefixed_iri">
-                  <field name="PREFIX">rdf</field>
-                  <field name="LOCAL_NAME">type</field>
-                </block>
-              </value>
-              <value name="OBJECT">
-                <block type="sparql_prefixed_iri">
-                  <field name="PREFIX">foaf</field>
-                  <field name="LOCAL_NAME">Person</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <sep gap="32"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">foaf</field>
-              <field name="LOCAL_NAME">name</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">name</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">foaf</field>
-              <field name="LOCAL_NAME">depiction</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">picture</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">foaf</field>
-              <field name="LOCAL_NAME">knows</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">friend</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
-      <category name="• Dummy Tab 4">
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">geo</field>
-              <field name="LOCAL_NAME">lat</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">latitude</field>
-            </shadow>
-          </value>
-        </block>
-        <sep gap="8"></sep>
-        <block type="sparql_verb_object">
-          <value name="VERB">
-            <block type="sparql_prefixed_iri">
-              <field name="PREFIX">geo</field>
-              <field name="LOCAL_NAME">long</field>
-            </block>
-          </value>
-          <value name="OBJECT">
-            <shadow type="variables_get">
-              <field name="VAR">longitude</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
-    </category>
     <sep></sep>
 
 
@@ -611,211 +201,21 @@
       <sep gap="8"></sep>
       <block type="sparql_math_random_float"></block>
     </category>
-    <category name="&#xf109; Text" colour="160">
-      <block type="sparql_text"></block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_with_lang">
-        <field name="LANG">en</field>
+    <category name="&#xf101; Compose" colour="250">
+      <block type="sparql_union"></block>
+      <block type="sparql_optional"></block>
+      <block type="sparql_graph">
+        <value name="GRAPHNAME">
+          <block type="variables_get">
+            <field name="VAR">graph</field>
+          </block>
+        </value>
       </block>
+    </category>
 
-      <sep gap="32"></sep>
-      <block type="sparql_text_join"></block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_length">
-        <value name="VALUE">
-          <shadow type="sparql_text">
-            <field name="TEXT">abc</field>
-          </shadow>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_isEmpty">
-        <value name="VALUE">
-          <shadow type="sparql_text">
-            <field name="TEXT"></field>
-          </shadow>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_charAt">
-        <value name="VALUE">
-          <block type="variables_get">
-            <field name="VAR">text</field>
-          </block>
-        </value>
-        <value name="AT">
-          <shadow type="sparql_math_number">
-            <field name="NUM">1</field>
-          </shadow>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_getSubstring">
-        <value name="STRING">
-          <block type="variables_get">
-            <field name="VAR">text</field>
-          </block>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_changeCase">
-        <value name="TEXT">
-          <shadow type="sparql_text">
-            <field name="TEXT">abc</field>
-          </shadow>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_text_contains">
-        <value name="FIND">
-          <shadow type="sparql_text">
-            <field name="TEXT">abc</field>
-          </shadow>
-        </value>
-        <value name="VALUE">
-          <block type="variables_get">
-            <field name="VAR">text</field>
-          </block>
-        </value>
-      </block>
-      <!-- <block type="sparql_text_regex">
-        <value name="FIND">
-          <block type="sparql_text"></block>
-        </value>
-        <value name="VALUE">
-          <block type="variables_get">
-            <field name="VAR">text</field>
-          </block>
-        </value>
-      </block> -->
-      <sep gap="32"></sep>
-      <block type="sparql_text_lang">
-        <value name="LANG">
-          <shadow type="sparql_text">
-            <field name="TEXT">en</field>
-          </shadow>
-        </value>
-        <value name="VALUE">
-          <block type="variables_get">
-            <field name="VAR">text</field>
-          </block>
-        </value>
-      </block>
-      <sep gap="32"></sep>
-      <block type="sparql_hash">
-        <value name="TEXT">
-          <shadow type="sparql_text">
-            <field name="TEXT">abc</field>
-          </shadow>
-        </value>
-      </block>
-    </category>
-    <category name="&#xf107; Resources" colour="20">
-      <block type="sparql_prefixed_iri"></block>
-      <sep gap="8"></sep>
-      <block type="sparql_iri"></block>
-  
-      <sep gap="32"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">aspect</field>
-        <field name="LOCAL_NAME">book-aspects#EquityAttributes</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">qzpath</field>
-        <field name="LOCAL_NAME">EquityAggregationUnit</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">range</field>
-        <field name="LOCAL_NAME">book#EquityAggregationUnit</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">p</field>
-        <field name="LOCAL_NAME">book#hasEquityAggregationUnit</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">template</field>
-        <field name="LOCAL_NAME">book/equity/aggregationunit/{?id}</field>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_prefixed_iri">
-        <field name="PREFIX">jsonpath</field>
-        <field name="LOCAL_NAME">$.EquityAggreagationUnit</field>
-      </block>
-  
-       <sep gap="32"></sep>
-       <block type="sparql_prefixed_iri">
-        <field name="PREFIX">helllooooooo</field>
-        <field name="LOCAL_NAME">canitypehere</field>
-      </block>
-    </category>
     <sep></sep>
-    <category name="&#xf10b; Variables" colour="330" custom="VARIABLE">
-      
-    </category>
-    <sep></sep>
-
-
-
-    <category name="&#xf10a; Search" colour="290">
-      <block type="sparql_builtin_resources">
-        <field name="ENDPOINT">http://dbpedia.org/sparql</field>
-        <value name="GRAPH">
-          <block type="sparql_iri">
-            <field name="IRI">http://dbpedia.org</field>
-          </block>
-        </value>
-        <value name="TYPE">
-          <shadow type="sparql_prefixed_iri">
-            <field name="PREFIX">owl</field>
-            <field name="LOCAL_NAME">Thing</field>
-          </shadow>
-        </value>
-        <value name="FIND">
-          <shadow type="sparql_text_with_lang">
-            <field name="TEXT">abc</field>
-            <field name="LANG">en</field>
-          </shadow>
-        </value>
-        <field name="LIMIT">5</field>
-      </block>
-      <block type="sparql_builtin_classes">
-        <field name="ENDPOINT">http://dbpedia.org/sparql</field>
-        <value name="GRAPH">
-          <block type="sparql_iri">
-            <field name="IRI">http://dbpedia.org</field>
-          </block>
-        </value>
-        <value name="FIND">
-          <shadow type="sparql_text_with_lang">
-            <field name="TEXT">abc</field>
-            <field name="LANG">en</field>
-          </shadow>
-        </value>
-        <field name="LIMIT">5</field>
-      </block>
-      <block type="sparql_builtin_properties">
-        <field name="ENDPOINT">http://dbpedia.org/sparql</field>
-        <value name="GRAPH">
-          <block type="sparql_iri">
-            <field name="IRI">http://dbpedia.org</field>
-          </block>
-        </value>
-        <value name="FIND">
-          <shadow type="sparql_text_with_lang">
-            <field name="TEXT">abc</field>
-            <field name="LANG">en</field>
-          </shadow>
-        </value>
-        <field name="LIMIT">5</field>
-      </block>
-    </category>
   </xml>
-
-
+  
   <xml id="toolboxTest" style="display: none">
     <category name="&#xf106; Query" colour="290">
       <block type="sparql_execution_endpoint_query">
@@ -824,7 +224,7 @@
       </block>
     </category>
 
-    <category name="&#xf104; Patterns" colour="120">
+    <category name="&#xf104; Containers" colour="120">
       <block type="sparql_typedsubject_propertylist">
         <value name="SUBJECT">
           <block type="variables_get">
@@ -1685,32 +1085,70 @@
       </block>
     </category>
   </xml>
+  
 
+  <!-- Containers -->
   <script type="text/javascript">
-      var x = "", i;
-    for (i=1; i<=10; i++){
-      x = x + " <block type='sparql_typedsubject_propertylist'> \
-        <value name='TYPE'>\
-          <block type='variables_get'>\
-            <field name='VAR'>test1</field>\
-          </block>\
-        </value>\
-        <statement name='PROPERTY_LIST'>\
-          <block type='sparql_verb_object'>\
-            <value name='VERB'>\
-              <block type='variables_get'>\
-                <field name='VAR'>test2</field>\
-              </block>\
-            </value>\
-            <value name='OBJECT'>\
+
+    var cats = ["account", "book", "party"]
+
+    var x = "", i;
+    x = x + "\
+    <block type='sparql_subject_propertylist'>\
+      <value name='SUBJECT'>\
+        <shadow type='variables_get'>\
+          <field name='VAR'>subj</field>\
+        </shadow>\
+      </value><statement name='PROPERTY_LIST'>\
+      <shadow type='sparql_verb_object'>\
+      <value name='VERB'><shadow type='variables_get'>\
+        <field name='VAR'>pred</field>\
+        </shadow></value><value name='OBJECT'><shadow type='variables_get'>\
+      <field name='VAR'>obj</field>\
+      </shadow></value></shadow>\
+      </statement>\
+    </block>\
+    <sep gap='5'></sep>"
+
+    for (i=0; i<cats.length; i++){
+      x = x + "\
+        <block type='sparql_subject_propertylist'>\
+          <value name='SUBJECT'>\
+            <block type='variables_get'>\
+              <field name='VAR'>" + cats[i] + "</field>\
+            </block>\
+          </value><statement name='PROPERTY_LIST'>\
+        </block>\
+        <sep gap='5'></sep>"
+    }
+
+    for (i=0; i<cats.length; i++){
+      x = x + "\
+        <block type='sparql_typedsubject_propertylist'>\
+          <value name='TYPE'>\
+            <block type='variables_get'>\
+              <field name='VAR'>" + cats[i] + "</field>\
+            </block>\
+          </value>\
+        </block>\
+        <sep gap='5'></sep>" 
+    }
+
+    x = x + "\
+    <block type='sparql_verb_object'>\
+          <value name='VERB'>\
+              <block type='sparql_prefixed_iri'>\
+            </block>\
+          </value>\
+          <value name='OBJECT'>\
             <shadow type='variables_get'>\
               <field name='VAR'>insert value</field>\
             </shadow>\
           </value>\
-          </block>\
-        </statement>\
-      </block>"
-    }
+        </block>\
+        <sep gap='5'></sep>"
+    
+
     document.getElementById("patterns-data").innerHTML = x  
   </script>   
 
@@ -1997,28 +1435,14 @@
       "party#hasFMURegulatoryRecord",
       "party#leiLegalForm"];
       var x = "", i;
-    x = "<block type='sparql_typedsubject_propertylist'>\
-      <value name='TYPE'>\
-        <block type='variables_get'>\
-          <field name='VAR'>account</field>\
-        </block>\
-      </value>\
-    </block>"
-    for (i=0; i<verbs.length + 6; i++){
-      x = x + " <block type='sparql_verb_object'>\
-          <value name='VERB'>\
-            <block type='sparql_prefixed_iri'>\
-              <field name='PREFIX'>account</field>\
-              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
-            </block>\
-          </value>\
-          <value name='OBJECT'>\
-            <shadow type='variables_get'>\
-              <field name='VAR'>insert value</field>\
-            </shadow>\
-          </value>\
-        </block>\
-        <sep gap='5'></sep>"
+    x = "";
+    for (i=0; i<verbs.length + 8; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>account</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
     }
     document.getElementById("account-vocab").innerHTML = x  
   </script> 
@@ -2100,28 +1524,13 @@
       "book#hasTrader",
       "book#isLiveTradingBook"];
     var x = "", i;
-    x = "<block type='sparql_typedsubject_propertylist'>\
-      <value name='TYPE'>\
-        <block type='variables_get'>\
-          <field name='VAR'>book</field>\
-        </block>\
-      </value>\
-    </block>"
-    for (i=0; i<verbs.length + 6; i++){
-      x = x + " <block type='sparql_verb_object'>\
-          <value name='VERB'>\
-            <block type='sparql_prefixed_iri'>\
-              <field name='PREFIX'>book</field>\
-              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
-            </block>\
-          </value>\
-          <value name='OBJECT'>\
-            <shadow type='variables_get'>\
-              <field name='VAR'>insert value</field>\
-            </shadow>\
-          </value>\
-        </block>\
-        <sep gap='5'></sep>"
+    for (i=0; i<verbs.length + 8; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>book</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
     }
     document.getElementById("book-vocab").innerHTML = x  
   </script>
@@ -2419,28 +1828,14 @@
       "party#telekursGKKeyIssuerID",
       "party#temporaryAliceIssuerID"];
     var x = "", i;
-    x = "<block type='sparql_typedsubject_propertylist'>\
-      <value name='TYPE'>\
-        <block type='variables_get'>\
-          <field name='VAR'>party</field>\
-        </block>\
-      </value>\
-    </block>"
-    for (i=0; i<verbs.length + 6; i++){
-      x = x + " <block type='sparql_verb_object'>\
-          <value name='VERB'>\
-            <block type='sparql_prefixed_iri'>\
-              <field name='PREFIX'>party</field>\
-              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
-            </block>\
-          </value>\
-          <value name='OBJECT'>\
-            <shadow type='variables_get'>\
-              <field name='VAR'>insert value</field>\
-            </shadow>\
-          </value>\
-        </block>\
-        <sep gap='5'></sep>"
+
+    for (i=0; i<verbs.length + 8; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>party</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
     }
     document.getElementById("party-party").innerHTML = x  
   </script> 
@@ -2768,28 +2163,13 @@
       "party#hasSharedTIN",
       "party#hasSuperFamily"];
     var x = "", i;
-    x = "<block type='sparql_typedsubject_propertylist'>\
-      <value name='TYPE'>\
-        <block type='variables_get'>\
-          <field name='VAR'>party</field>\
-        </block>\
-      </value>\
-    </block>"
-    for (i=0; i<verbs.length + 6; i++){
-      x = x + " <block type='sparql_verb_object'>\
-          <value name='VERB'>\
-            <block type='sparql_prefixed_iri'>\
-              <field name='PREFIX'>employee</field>\
-              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
-            </block>\
-          </value>\
-          <value name='OBJECT'>\
-            <shadow type='variables_get'>\
-              <field name='VAR'>insert value</field>\
-            </shadow>\
-          </value>\
-        </block>\
-        <sep gap='5'></sep>"
+    for (i=0; i<verbs.length + 8; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>account</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
     }
     document.getElementById("party-employee").innerHTML = x  
   </script> 
@@ -3251,30 +2631,42 @@
       "party#financeInternalEntityId",
       "party#japaneseLegalName"];
     var x = "", i;
-    x = "<block type='sparql_typedsubject_propertylist'>\
-      <value name='TYPE'>\
-        <block type='variables_get'>\
-          <field name='VAR'>party</field>\
-        </block>\
-      </value>\
-    </block>"
-    for (i=0; i<verbs.length + 6; i++){
-      x = x + " <block type='sparql_verb_object'>\
-          <value name='VERB'>\
-            <block type='sparql_prefixed_iri'>\
-              <field name='PREFIX'>organization</field>\
-              <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
-            </block>\
-          </value>\
-          <value name='OBJECT'>\
-            <shadow type='variables_get'>\
-              <field name='VAR'>insert value</field>\
-            </shadow>\
-          </value>\
-        </block>\
-        <sep gap='5'></sep>"
+   
+    for (i=0; i<verbs.length + 8; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>account</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
     }
     document.getElementById("party-organization").innerHTML = x  
+  </script> 
+
+  <!-- basic -->
+  <script type="text/javascript">
+      var verbs = ["Class", "Property", "type"]
+      var verbs2 = ["subClassOf", "subPropertyOf", "domain", "range"]
+
+    var x = "", i;
+   
+    for (i=0; i<verbs.length; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>rdf</field>\
+        <field name='LOCAL_NAME'>" + verbs[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
+    }
+    for (i=0; i<verbs2.length; i++){
+      x = x + "\
+      <block type='sparql_prefixed_iri'>\
+        <field name='PREFIX'>rdfs</field>\
+        <field name='LOCAL_NAME'>" + verbs2[i] + "</field>\
+      </block>\
+      <sep gap='8'></sep>"
+    }
+    document.getElementById("basic-vocab").innerHTML = x  
   </script> 
 
   <!-- end my code -->
