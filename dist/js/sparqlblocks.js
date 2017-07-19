@@ -11006,7 +11006,7 @@
                 for (var o = this.safeName_(e), r = ""; this.dbReverse_[o + r] || o + r in this.reservedDict_;) r = r ? r + 1 : 2;
                 return o += r, this.dbReverse_[o] = !0, (t == Blockly.Variables.NAME_TYPE ? this.variablePrefix_ : "") + o
             }, Blockly.Names.prototype.safeName_ = function(e) {
-                return e ? (e = encodeURI(e.replace(/ /g, "_")).replace(/[^\w]/g, "_"), -1 != "0123456789".indexOf(e[0]) && (e = "my_" + e)) : e = "unnamed", e
+                return e ? (e = encodeURI(e.replace(/ /g, "_")).replace(/[^\w]/g, "_"), -1 != "0123456789".indexOf(e[0]) && (e = e)) : e = "unnamed", e
             }, Blockly.Names.equals = function(e, t) {
                 return e.toLowerCase() == t.toLowerCase()
             }, Blockly.Procedures = {}, Blockly.Procedures.NAME_TYPE = "PROCEDURE", Blockly.Procedures.allProcedures = function(e) {
@@ -29262,10 +29262,11 @@
                             scaleSpeed: 1.1
                         },
                         shadowMorph: !0
-                    }), i(".blocklyToolboxDiv").prepend('<div class="main-button-container clearfix"><div class="main-button-container clearfix"><button class="main-button btn btn-block" disabled title="Save as Gist on GitHub" type="button" id="save-button"><span class="octicon octicon-cloud-upload"></span> Save as Gist</button></div><div class="main-button-container clearfix"><button class="main-button btn btn-block" disabled title="Copy Link to Clipboard" id="copy-button" type="button"><span class="octicon octicon-clippy"></span> Copy Link</button></div></div>'), i("#save-button").on("click", function() {
+                    /*}), i(".blocklyToolboxDiv").prepend('<div class="main-button-container clearfix"><div class="main-button-container clearfix"><button class="main-button btn btn-block" disabled title="Save as Gist on GitHub" type="button" id="save-button"><span class="octicon octicon-cloud-upload"></span> Save as Gist</button></div><div class="main-button-container clearfix"><button class="main-button btn btn-block" disabled title="Copy Link to Clipboard" id="copy-button" type="button"><span class="octicon octicon-clippy"></span> Copy Link</button></div></div>'), i("#save-button").on("click", function() {
                         r.Storage.linkGist()
                     }), r.Storage.setCopyOnThisButton("#copy-button"), r.Storage.startup(h), r.Track.track(h, {
                         webSocket: e
+                    */
                     });
                     var m = document.getElementById("dialogDataNotice");
                     if (!m) return;
@@ -29982,7 +29983,7 @@
             null === o && (o = 0);
             //My code base prefix
             for (var i = "BASE <http://refdata.bankofamerica.com/>\
-                \nPREFIX country: <http://refdata.bankofamerica.com/country#>\
+                \nPREFIX party: <http://refdata.bankofamerica.com/party#>\
                 \n\nSELECT DISTINCT * WHERE {\n" + t + "\n}", s = null, a = 1; a <= e.orderFieldCount_; a++) {
                 var l = r.valueToCode(e, "ORDER_FIELD" + a, r.ORDER_NONE);
                 if (l) {
